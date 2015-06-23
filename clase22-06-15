@@ -1,0 +1,145 @@
+/////////////////////////////////////////CLASE DIRECCION//////////////////////////////////////////////////////
+
+package EjercicioExamen;
+
+
+public class Direccion {
+    private String calle;
+    private String Colonia;
+    private String Municipo;
+    private int cp;
+    private int numero;
+
+    public Direccion(int cp) {
+        this.cp=cp;
+    }
+
+    public Direccion(String Municipo, int cp) {
+        this.Municipo = Municipo;
+        this.cp = cp;
+    }
+    
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public void setCalle(String calle) {
+        this.calle = calle;
+    }
+
+    public String getColonia() {
+        return Colonia;
+    }
+
+    public void setColonia(String Colonia) {
+        this.Colonia = Colonia;
+    }
+
+    public String getMunicipo() {
+        return Municipo;
+    }
+
+    public void setMunicipo(String Municipo) {
+        this.Municipo = Municipo;
+    }
+
+    public int getCp() {
+        return cp;
+    }
+
+    public void setCp(int cp) {
+        this.cp = cp;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public void setNumero(int numero) {
+        this.numero = numero;
+    }
+}
+
+
+
+/////////////////////////CLASE USUARIO///////////////////////////////////////////////////////
+
+package EjercicioExamen;
+
+
+public class Usuario {
+    private String nombre;
+    private int edad;
+    private Direccion direccion;
+    private String email;
+
+    public Usuario() {
+    }
+
+    public Usuario(String nombre, int edad, Direccion direccion, String email) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.direccion = direccion;
+        this.email = email;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public Direccion getDireccion() {
+        return direccion;
+    }
+
+    public void setDireccion(Direccion direccion) {
+        this.direccion = direccion;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+    
+    
+    
+    
+}
+
+
+
+/////////////////////////////////////////CLASE MAIN ANTRO//////////////////////////////////////////////////////////////
+
+package EjercicioExamen;
+
+
+public class Antro {
+
+    
+    public static void main(String[] args) {
+        
+        Direccion d1=new Direccion("Ecatepunk", 55130);
+   Usuario u1=new Usuario("Hugo", 22, d1, "hugoserratos@gmail.com");
+        System.out.println(u1.getDireccion().getMunicipo());
+        
+  
+   
+           
+    }
+    
+}
